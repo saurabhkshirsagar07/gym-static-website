@@ -30,9 +30,8 @@ steps {
 sshagent([SSH_CREDENTIAL]) {
 sh """
 ssh -o StrictHostKeyChecking=no ${REM
-OTE_USER}@${SERVER_IP} '
-sudo systemctl restart nginxx
-'
+OTE_USER}@${SERVER_IP} 
+sudo systemctl restart nginx
 """
 }
 }
