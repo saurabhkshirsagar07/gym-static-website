@@ -28,8 +28,7 @@ stage('Restart Nginx') {
 steps {
 sshagent([SSH_CREDENTIAL]) {
 sh """
-ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 
-'sudo systemctl restart nginx'
+ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} 'sudo systemctl restart nginx'
 """
 }
 }
